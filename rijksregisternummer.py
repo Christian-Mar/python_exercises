@@ -13,8 +13,8 @@
 # Schrijf een functie die bepaalt of een nummer een priemgetal is of niet.
 
 
-def check_id():
-    id_number_string = input("Can you give me your id-number (11 characters), please: ")
+def check_id(id_number_string):
+#    id_number_string = input("Can you give me your id-number (11 characters), please: ")
 
     if len(id_number_string) != 11: # controll input
         print("You didn't have 11 characters")
@@ -25,7 +25,7 @@ def check_id():
     # print(last_two_numbers) # check
 
     if 97 - (first_nine_numbers % 97) == last_two_numbers:
-        print("Validd number")
+        print("Valid number")
     elif 100 - (first_nine_numbers % 97) == last_two_numbers:
         print("Valid number")
     else:
@@ -37,4 +37,6 @@ def check_id():
         print("Your're male")
 
 
-check_id()
+
+id_number_string = input("Can you give me your id-number (11 characters), please: ")
+check_id(id_number_string)
