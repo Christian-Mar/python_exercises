@@ -1,8 +1,33 @@
 def eerste_dag_weekdag(jaar, maand):
+
     """
-    Geeft de weekdag van de eerste dag van de opgegeven maand en jaar (Zeller’s Congruence).
-    Retourneert een string met de weekdag (bijv. 'maandag').
+    Calculates the day of the week for the first day of a given month and year
+    using Zeller's Congruence algorithm.
+
+    The returned weekday is based on a list starting with 'Saturday' (0).
+
+    Parameters
+    ----------
+    jaar : int
+        The year (e.g., 2025).
+    maand : int
+        The month (1 for January, 12 for December).
+
+    Returns
+    -------
+    str
+        The name of the weekday for the first day of the specified month,
+        in Dutch (e.g., 'zaterdag', 'maandag').
+
+    Author
+    ------
+    Christian Marginer
+
+    Date
+    ----
+    November 1, 2025
     """
+    
     dagen = ['zaterdag', 'zondag', 'maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag']
 
     # Zeller gebruikt maanden: maart=3, ..., februari=14. Januari en februari worden als maand 13 en 14 van het vorige jaar gezien.
