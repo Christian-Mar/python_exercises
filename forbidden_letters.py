@@ -116,5 +116,6 @@ def uses_all(word, required):
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
-    print(uses_all('better', 'ater'))
+    print(uses_all('better', 'ter'))
 
+# Test - er gebeurt niets als de test succesvol verlopen zijn, fail als test niet passeert
