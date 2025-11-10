@@ -33,3 +33,9 @@ print(".".join(ip))
 name = "Yves"
 if name is not None: # niet !=
     pass
+
+# Oefening 1: is een woord een palindroom
+# Oefening 2: id een woord een vodo-woord (eerste letter vanachter, dan omgekeerd leest het hetzelfde
+# Oefening 3: is een woord een anagram (met dezelfde letter een ander woord vormen)
+# Oefening 4: komt dit anagram ook voor in de lijst word.txt
+# Oefening 5: wat is het langste palindroom in word.txt
