@@ -80,7 +80,13 @@ def word_score(word, available):
     >>> word_score('cartload', 'ACDLORT')
     15
     """
+
+    for w in word.upper():
+        if w not in available.upper():
+            return 0
+
     length = len(word)
+
     if length == 4:
         score = 1
     else:
