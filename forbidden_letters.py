@@ -59,7 +59,7 @@ def check_word(word, available, required):
     if required not in word.upper():
         return False
     
-    # Check if all letters in word are in available letters
+    # Check if all letters in word are in available letters - de functie uses_only kan hier ook gebruikt worden. 
     for letter in word.upper():
         if letter not in available:
             return False
