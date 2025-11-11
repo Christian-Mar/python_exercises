@@ -39,3 +39,4 @@ if name is not None: # niet !=
 # Oefening 3: is een woord een anagram (met dezelfde letter een ander woord vormen)
 # Oefening 4: komt dit anagram ook voor in de lijst word.txt
 # Oefening 5: wat is het langste palindroom in word.txt
+# Oefening 6: schrijf oefening 2 zonder het plusteken te gebruiken
