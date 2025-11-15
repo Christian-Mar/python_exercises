@@ -103,7 +103,7 @@ def find_anagrams_in_file(word, filename):
 
 
 if __name__ == "__main__":
-    word = "aal"
+    word = "donaban"
     result = find_anagrams_in_file(word, "words.txt")
     if result:
         print(f"Anagrams of '{word}': {result}")

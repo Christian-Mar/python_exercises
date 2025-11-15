@@ -78,7 +78,7 @@ def is_vodo_word_no_plus(word):
         return True
     
     normalized_word = word.lower()
-    rotated_word = ''.join([normalized_word[1:], normalized_word[0]])
+    rotated_word = ''.join([normalized_word[1:], normalized_word[0]]) # list
     reversed_word = normalized_word[::-1]
     
     return rotated_word == reversed_word
@@ -88,4 +88,4 @@ if __name__ == "__main__":
     import doctest
     doctest.testmod()
 
-    print(is_vodo_word_no_plus("vodo"))   
+    print(is_vodo_word_no_plus("odo"))   

@@ -55,6 +55,3 @@ if __name__ == "__main__":
     print(result)
 
 
-
-# Oefening 4: komt dit anagram ook voor in de lijst word.txt
-# Oefening 5: wat is het langste palindroom in word.txt
