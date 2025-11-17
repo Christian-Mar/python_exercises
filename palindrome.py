@@ -1,6 +1,6 @@
-# Oefening 1: is een woord een palindroom
+# Oefening 1: is een woord een palindroom 
 
-def is_palindrome(word):
+def is_palindrome(word: str) -> bool:
     """
     Check if a word is a palindrome.
     
@@ -40,12 +40,16 @@ print(is_palindrome("racecar"))
 # Oefening 5: wat is het langste palindroom in word.txt
 
 def find_longest_palindrome(filename):
+    #length = -1
     longest_palindrome = ""
+    
 
     with open(filename, 'r') as file:
+        print(file)
         for line in file:
             word = line.strip() # get the word pure
-            if is_palindrome(word) and len(word) > len(longest_palindrome):
+            
+            if is_palindrome(word) and len(word) > len(longest_palindrome): # reverse to make it faster - first len then palindrome
                 longest_palindrome = word
     
     return longest_palindrome if longest_palindrome else None

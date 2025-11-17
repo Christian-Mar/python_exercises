@@ -1,4 +1,4 @@
-# Oefening 3: is een woord een anagram (met dezelfde letters een ander woord vormen)
+# Oefening 3: is een woord een anagram (met dezelfde letters een ander woord vormen) 
 
 def is_anagram(word1, word2):
     """
@@ -37,6 +37,8 @@ def is_anagram(word1, word2):
     """
     normalized_word1 = word1.lower()
     normalized_word2 = word2.lower()
+
+    # return sorted(word1.lower()) == sorted(word2.lower())
     
     if len(normalized_word1) != len(normalized_word2):
         return False

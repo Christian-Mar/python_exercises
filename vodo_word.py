@@ -1,4 +1,4 @@
-def is_vodo_word(word):
+def is_vodo_word(word): 
     """
     Check if a word is a vodo word.
     
@@ -88,4 +88,4 @@ if __name__ == "__main__":
     import doctest
     doctest.testmod()
 
-    print(is_vodo_word_no_plus("odo"))   
+    print(is_vodo_word_no_plus("vodo"))   
