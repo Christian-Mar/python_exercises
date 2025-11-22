@@ -1,4 +1,4 @@
-def evaluate_wordle_guess(target_word, guess_word):
+def evaluate_wordle_guess(target_word: str, guess_word: str) -> str:
     """
     Evaluates a 5-letter Wordle guess against the target word
     using only strings (no lists, tuples, dictionaries, or sets).
@@ -74,7 +74,7 @@ def evaluate_wordle_guess(target_word, guess_word):
     return feedback
 
 
-def run_wordle_game_simulation(target_word):
+def run_wordle_game_simulation(target_word: str) -> None:
     """
     Illustrative game loop for demonstration purposes.
     In a real game, this would use input() to get user guesses.
