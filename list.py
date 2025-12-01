@@ -22,3 +22,6 @@ print("Filtered:", PROVINCES_NEW)
 # verschil tussen delete, remove en pop
 # opletten want indexen vallen weg, waardoor 2 woorden met klinkers na elkaar overgeslagen worden
 # list comprehension
+# linked list
+
+print(PROVINCES.sort()) # None? 
