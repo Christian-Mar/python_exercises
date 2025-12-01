@@ -19,3 +19,6 @@ clear_names_starting_with_vowel(PROVINCES, PROVINCES_NEW)
 print("Original:", PROVINCES)
 print("Filtered:", PROVINCES_NEW)
 
+# verschil tussen delete, remove en pop
+# opletten want indexen vallen weg, waardoor 2 woorden met klinkers na elkaar overgeslagen worden
+# list comprehension
