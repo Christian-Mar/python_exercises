@@ -6,8 +6,8 @@ def binaire_zoek_stappen(doelgetal):
     hoog = 10000
     stappen_teller = 0
     
-    if not 1 <= doelgetal <= 10000:
-        return "Fout: Het doelgetal ligt buiten het bereik (1-10000)."
+    # if not 1 <= doelgetal <= 10000:
+    #    return "Fout: Het doelgetal ligt buiten het bereik (1-10000)."
 
     while laag <= hoog:
         stappen_teller += 1

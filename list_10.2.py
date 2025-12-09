@@ -23,3 +23,5 @@ print(result)
 t2 = [4, 1, 5, 2]
 result2 = cumsum(t2)
 print(f"\nExample 2: Input: {t2}, Output: {result2}")
+
+# onliner: return [sum(t[:i+1]) for i in range(len(t))]
