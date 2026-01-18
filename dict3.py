@@ -12,30 +12,30 @@ def find_most_anagrams(words):
     anagram_dict = {}
 
     for word in words:
-        signature = "".join(sorted(word))
+        signature = "".join(sorted(word)) # becomes the key in alphabetical order
     
         if signature not in anagram_dict:
             anagram_dict[signature] = [word]
         else:
-            anagram_dict[signature].append(word)
+            anagram_dict[signature].append(word) # for every key there'll be a list of words
 
-    longest_anagram_list = [] # find list with most words
+    longest_anagram_list = [] 
     
-    for group in anagram_dict.values():
+    for group in anagram_dict.values(): # find list with most words
         if len(group) > len(longest_anagram_list):
             longest_anagram_list = group
             
     return longest_anagram_list
 
-resultaat = find_most_anagrams(words_list)
-print(f"De grootste groep anagrammen bevat {len(resultaat)} woorden:")
-print(resultaat)
+result = find_most_anagrams(words_list)
+print(f"The largest group contains {len(result)} words:")
+print(result)
 
-# Priemgetallen met memoization (caching)
+# Priemgetallen met caching
 prime_cache = {}
 
 def is_prime(n):
-    """Bepaal of n een priemgetal is, met caching via dictionary."""
+    
     if n in prime_cache:
         return prime_cache[n]
 
@@ -51,7 +51,7 @@ def is_prime(n):
         prime_cache[n] = False
         return False
 
-    for i in range(3, int(n ** 0.5) + 1, 2):
+    for i in range(3, int(n ** 0.5) + 1, 2): # starts with 3 and goes in steps of 2 to avoid n % 2 == 0, numbers hight than the square root are useless
         if n % i == 0:
             prime_cache[n] = False
             return False
@@ -60,13 +60,12 @@ def is_prime(n):
     return True
 
 def get_primes_up_to(limit):
-    """Geef alle priemgetallen tot en met limit."""
-    return [n for n in range(2, limit + 1) if is_prime(n)]
+    return [n for n in range(2, limit + 1) if is_prime(n)] # list comprehension including 2 up to limit + 1 (as the range starts with 0 and not 1)
 
 # Test
-print(f"Priemgetallen tot 50: {get_primes_up_to(50)}")
-print(f"Is 97 een priemgetal? {is_prime(97)}")
-print(f"Is 100 een priemgetal? {is_prime(100)}")
+print(f"Prime numbers till 50: {get_primes_up_to(50)}")
+print(f"Is 97 a prime number? {is_prime(97)}")
+print(f"Is 100 a prime number? {is_prime(100)}")
 
 # Zoek paren die samen 15 maken (in één keer door de lijst)
 
@@ -85,7 +84,7 @@ def find_pair_sum_fifteen(numbers):
     return None
 
 
-random_list = [1, 3, 7, 8]
+random_list = [1, 3, 6, 7, 8, 9]
 
 
 print(f"List: {random_list}")
@@ -97,3 +96,25 @@ if result:
 else:
     print("Found nothing")
 
+# Poging 2 om alle paren te zien
+
+def find_all_pairs_sum_fifteen(numbers):
+    seen = {}  
+    found_pairs = []
+
+    for num in numbers:
+        supplement = 15 - num
+
+        if supplement in seen:
+            found_pairs.append((supplement, num))
+        
+        seen[num] = True # number has already been seen
+
+    return found_pairs
+
+random_list = [1, 3, 6, 7, 8, 9]
+
+result = find_all_pairs_sum_fifteen(random_list)
+
+print(f"List: {random_list}")
+print(f"Found: {result}")
