@@ -28,6 +28,7 @@ def find_most_anagrams(words):
     return longest_anagram_list
 
 result = find_most_anagrams(words_list)
+print('-' * 20)
 print(f"The largest group contains {len(result)} words:")
 print(result)
 
@@ -63,6 +64,7 @@ def get_primes_up_to(limit):
     return [n for n in range(2, limit + 1) if is_prime(n)] # list comprehension including 2 up to limit + 1 (as the range starts with 0 and not 1)
 
 # Test
+print('-' * 20)
 print(f"Prime numbers till 50: {get_primes_up_to(50)}")
 print(f"Is 97 a prime number? {is_prime(97)}")
 print(f"Is 100 a prime number? {is_prime(100)}")
@@ -86,7 +88,7 @@ def find_pair_sum_fifteen(numbers):
 
 random_list = [1, 3, 6, 7, 8, 9]
 
-
+print('-' * 20)
 print(f"List: {random_list}")
 
 result = find_pair_sum_fifteen(random_list)
@@ -115,6 +117,6 @@ def find_all_pairs_sum_fifteen(numbers):
 random_list = [1, 3, 6, 7, 8, 9]
 
 result = find_all_pairs_sum_fifteen(random_list)
-
+print('-' * 20)
 print(f"List: {random_list}")
 print(f"Found: {result}")
