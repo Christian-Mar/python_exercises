@@ -12,12 +12,12 @@ def find_most_anagrams(words):
     anagram_dict = {}
 
     for word in words:
-        signature = "".join(sorted(word)) # becomes the key in alphabetical order
+        sorted_word = "".join(sorted(word)) # becomes the key in alphabetical order
     
-        if signature not in anagram_dict:
-            anagram_dict[signature] = [word]
+        if sorted_word not in anagram_dict:
+            anagram_dict[sorted_word] = [word]
         else:
-            anagram_dict[signature].append(word) # for every key there'll be a list of words
+            anagram_dict[sorted_word].append(word) # for every key there'll be a list of words
 
     longest_anagram_list = [] 
     
@@ -28,6 +28,7 @@ def find_most_anagrams(words):
     return longest_anagram_list
 
 result = find_most_anagrams(words_list)
+
 print('-' * 20)
 print(f"The largest group contains {len(result)} words:")
 print(result)
@@ -37,8 +38,8 @@ prime_cache = {}
 
 def is_prime(n):
     
-    if n in prime_cache:
-        return prime_cache[n]
+    #if n in prime_cache:
+     #   return prime_cache[n]
 
     if n < 2:
         prime_cache[n] = False
@@ -52,7 +53,7 @@ def is_prime(n):
         prime_cache[n] = False
         return False
 
-    for i in range(3, int(n ** 0.5) + 1, 2): # starts with 3 and goes in steps of 2 to avoid n % 2 == 0, numbers hight than the square root are useless
+    for i in range(3, int(n ** 0.5)+1, 2): # starts with 3 and goes in steps of 2 to avoid n % 2 == 0, numbers higher than the square root are useless
         if n % i == 0:
             prime_cache[n] = False
             return False
@@ -65,7 +66,7 @@ def get_primes_up_to(limit):
 
 # Test
 print('-' * 20)
-print(f"Prime numbers till 50: {get_primes_up_to(50)}")
+print(f"Prime numbers till 200: {get_primes_up_to(200)}")
 print(f"Is 97 a prime number? {is_prime(97)}")
 print(f"Is 100 a prime number? {is_prime(100)}")
 
@@ -81,7 +82,7 @@ def find_pair_sum_fifteen(numbers):
         if supplement in seen:
             return (supplement, num)
 
-        seen[num] = True
+        seen[num] = True # number has already been seen
 
     return None
 
@@ -105,13 +106,14 @@ def find_all_pairs_sum_fifteen(numbers):
     found_pairs = []
 
     for num in numbers:
-        supplement = 15 - num
+        supplement = 15 - num 
 
-        if supplement in seen:
+        if supplement in seen: # If i'am 7 is 8 already there?
             found_pairs.append((supplement, num))
         
-        seen[num] = True # number has already been seen
-
+        seen[num] = True # first in the loop is just the first number, then the second, then ... - value is alwayt True, it's all about the key
+        # print(f'{seen}')
+        
     return found_pairs
 
 random_list = [1, 3, 6, 7, 8, 9]
